@@ -2,7 +2,7 @@ const db = require('../../data/dbConfig');
 
 const checkBody = (req, res, next) => {
 	if (!req.body.username || !req.body.password) {
-		next({ status: 401, message: 'Name and password are a must here.' })
+		next({ status: 401, message: 'username and password required' })
 	} else {
 		next()
 	}
